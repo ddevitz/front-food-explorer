@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    button{
-        margin-top: 10px;
-    }
-    
-    div {
-        margin-top: 10px;
-    }
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 104px auto;
+    grid-template-areas: 
+    "header"
+    "content"
+    ;
 
     .window{
         width: 500px;

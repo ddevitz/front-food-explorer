@@ -5,10 +5,13 @@ import { PiReceipt, PiMagnifyingGlass, PiCaretLeft } from "react-icons/pi";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 import { ButtonText } from "../../components/ButtonText";
+import { Header } from "../../components/Header";
 
 export function Details() {
   return (
     <Container>
+
+      <Header />
 
       <div class="window">
         <h1>Hello World!</h1>
