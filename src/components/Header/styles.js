@@ -29,12 +29,12 @@ export const Container = styled.div`
 
 export const Logo = styled.div`
     display: flex;
-    align-items: center;
+    flex-direction: column;
 
     font-size: 24px;
     font-weight: 700;
 
-    width: 400px;
+    width: 350px;
     
     > svg {
         margin-right: 10px;
@@ -44,19 +44,25 @@ export const Logo = styled.div`
 
     div {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-
-        margin-top: 10px;
-
-        > span {
-            font-family: "Roboto", sans-serif;
-            font-size: 12px;
-            font-weight: 400;
-            
-            color: ${({ theme }) => theme.COLORS.TINTS_CAKE_100};
-
-            margin-top: -5px;
+        align-items: center;
+        
+        > svg {
+            margin-right: 8px;
         }
     }
+    
+    span {
+        display: flex;
+        justify-content: flex-end;
+        
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+            
+        color: ${({ theme }) => theme.COLORS.TINTS_CAKE_100};
+
+        margin: -5px 10px 0 0;
+    }
+
+
 `;
