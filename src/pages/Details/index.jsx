@@ -6,6 +6,7 @@ import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 import { ButtonText } from "../../components/ButtonText";
 import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
 
 export function Details() {
   return (
@@ -26,6 +27,8 @@ export function Details() {
         <ButtonText title="Criar uma nova conta"/>
         <ButtonText class="voltar" title="Voltar" icon={PiCaretLeft}/>
       </div>
+
+      <Footer/>
 
     </Container>
   )
