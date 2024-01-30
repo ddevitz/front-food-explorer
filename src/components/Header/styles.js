@@ -53,7 +53,7 @@ export const Logo = styled.div`
         }
     }
     
-    span {
+/*     span {
         display: flex;
         justify-content: flex-end;
         
@@ -65,6 +65,6 @@ export const Logo = styled.div`
 
         margin: -5px 10px 0 0;
     }
-
+ */
 
 `;

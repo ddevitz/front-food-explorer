@@ -5,25 +5,53 @@ export const Container = styled.div`
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 104px auto;
+    grid-template-rows: 100px auto 80px;
     grid-template-areas: 
     "header"
-    "content"
+    "main"
     "footer"
     ;
 
-    .window{
-        width: 500px;
-        height: auto;
+    main {
+        grid-area: main;
 
         display: flex;
         flex-direction: column;
-        align-items: center;
 
-        margin: 90px auto;
-        padding: 64px;
-        border-radius: 16px;
+        margin: 24px auto;
 
-        background-color: ${({ theme }) => theme.COLORS.DARK_700};
+        width: 80%;
+        height: 100%; 
+
+        > a{
+            font-size: 24px;
+
+            margin-bottom: 40px;
+
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
     }
+`;
+
+export const Content = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 390px;
+        height: 390px;
+    }
+
+    .detailsFood{
+        margin-left: 50px;
+
+        > p {
+            padding: 24px 0;
+        }
+    }
+
 `;

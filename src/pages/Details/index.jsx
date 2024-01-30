@@ -1,4 +1,6 @@
-import { Container } from "./styles"; 
+import { Container, Content} from "./styles"; 
+
+import foodImg from '../../assets/Mask-group-3.png';
 
 import { PiReceipt, PiMagnifyingGlass, PiCaretLeft } from "react-icons/pi";
 
@@ -12,21 +14,27 @@ export function Details() {
   return (
     <Container>
 
-      <Header />
+      <Header />  
 
-      <div class="window">
-        <h1>Hello World!</h1>
+      <main>
+      
+        <ButtonText title="Voltar" icon={PiCaretLeft}/>
 
-        <Button title="Incluir" loading/>
-        <Button icon={PiReceipt} title="Novo pedido (0)"/>
-        <Button title="Novo prato"/>
+        <Content>
 
-        <Input class="search" placeholder="Exemplo" icon={PiMagnifyingGlass}/>
-        <Input placeholder=" Nome do usuário" />
+          <img src={foodImg} alt="Imagem ilustrativa de um prato de comida" />
 
-        <ButtonText title="Criar uma nova conta"/>
-        <ButtonText class="voltar" title="Voltar" icon={PiCaretLeft}/>
-      </div>
+          <div className="detailsFood">
+
+            <h1>Nome da salada</h1>
+            <p>Descrição longa do prato, para descrever os ingretientes e como é o preparo</p>
+
+            <div className="componente-filtros">ingredientes</div>
+            <div className="componente-inclusao">- 01 + button </div>
+          </div>
+        </Content>
+
+      </main>
 
       <Footer/>
 
