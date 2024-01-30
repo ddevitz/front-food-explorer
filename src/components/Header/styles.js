@@ -35,6 +35,8 @@ export const Logo = styled.div`
     font-weight: 700;
 
     width: 350px;
+
+    font-family: "Roboto", sans-serif;
     
     > svg {
         margin-right: 10px;

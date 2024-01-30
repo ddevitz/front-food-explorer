@@ -31,6 +31,8 @@ export const Logo = styled.div`
     font-weight: 700;
 
     color: ${({ theme }) => theme.COLORS.LIGHT_700};
+
+    font-family: "Roboto", sans-serif;
     
     > svg {
         margin-right: 10px;
