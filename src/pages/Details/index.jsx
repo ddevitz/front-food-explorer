@@ -1,13 +1,14 @@
-import { Container, Content, Section } from "./styles"; 
+import { Container, Content, Section, Filters } from "./styles"; 
 
 import foodImg from '../../assets/Mask-group-3.png';
 
-import { PiCaretLeft } from "react-icons/pi";
+import { PiCaretLeft, PiPlus, PiMinus } from "react-icons/pi";
 
 import { ButtonText } from "../../components/ButtonText";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Filter } from "../../components/Filter";
+import { Button } from "../../components/Button";
 
 export function Details() {
   return (
@@ -25,14 +26,20 @@ export function Details() {
 
           <div className="detailsFood">
 
-            <h1>Nome da salada</h1>
-            <p>Descrição longa do prato, para descrever os ingretientes e como é o preparo</p>
+            <h1>Nome da refeição</h1>
+            <p>Descrição longa do prato, para descrever os ingredientes e como é o preparo, etc...</p>
+
+            <Filters>
+              <Filter title="ingrediente 1"/>
+              <Filter title="ingrediente 2"/>
+              <Filter title="ingrediente 3"/>
+            </Filters>
 
             <Section>
-              <Filter title="ingrediente"/>
-            </Section>
+              <PiMinus /> <p>01</p> <PiPlus />
 
-            <div className="componente-inclusao">- 01 + button </div>
+              <Button title="Incluir" price=" ∙ R$ 25,00"/>
+            </Section>
           </div>
         </Content>
 

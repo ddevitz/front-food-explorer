@@ -49,14 +49,48 @@ export const Content = styled.div`
     .detailsFood{
         margin-left: 50px;
 
+        h1 {
+            font-size: 40px;
+            font-weight: 500;
+        }
+
         > p {
             padding: 24px 0;
+
+            font-size: 24px;
+            font-weight: 400;
         }
     }
 
 `;
 
 export const Section = styled.div`
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
+    margin-top: 48px;
+
+    > svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    > p {
+        padding: 0 14px;
+    }
+
+    > button {
+        width: auto;
+
+        margin-left: 33px;
+    }
+
+`;
+
+export const Filters = styled.div`
+    display: flex;
+    flex-direction: row;
+
+    gap: 12px;
 `;

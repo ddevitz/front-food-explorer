@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-export function Button({ title, loading = false, icon: Icon }){
+export function Button({ title, loading = false, icon: Icon, price }){
     return(
         <Container 
             type="button"
@@ -8,6 +8,7 @@ export function Button({ title, loading = false, icon: Icon }){
             >
             {Icon && <Icon size={25} />}
             {title}
+            {price}
         </Container>
     );   
 }
