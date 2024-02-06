@@ -1,4 +1,4 @@
-import { PiHeartStraightLight, PiCaretRight, PiPlus, PiMinus } from "react-icons/pi";
+import { PiHeartStraightLight, PiPencilSimple, PiCaretRight, PiPlus, PiMinus } from "react-icons/pi";
 
 import foodImg from '../../assets/Mask-group-3.png';
 
@@ -8,7 +8,9 @@ import { Button } from "../Button";
 export function FoodCard(){
     return(
         <Container>
-            <PiHeartStraightLight />
+            {/* <PiHeartStraightLight /> */}
+            {/* Parte Admin */}
+            <PiPencilSimple />
             <Description>
                 <img src={foodImg} alt="Foto do prato" />
 
@@ -19,11 +21,11 @@ export function FoodCard(){
                 <span>R$ 0,00</span>
             </Description>
 
-            <Section>
+{/*             <Section>
               <PiMinus /> <p>01</p> <PiPlus />
 
               <Button title="Incluir" />
-            </Section>
+            </Section> */}
         </Container>
     )
 }

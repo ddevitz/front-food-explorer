@@ -2,32 +2,34 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
 
     display: grid;
     grid-template-rows: 100px auto 80px;
     grid-template-areas: 
     "header"
-    "top"
-    "content"
+    "main"
     "footer"
     ;
     
+    main {
+        grid-area: main;
+        padding: 0 124px;
+    }
+
 `;
 
-export const Top = styled.div`
-    grid-area: top;
-
+export const Banner = styled.div`
     background: linear-gradient(to bottom, #091E26, #00131C);
 
-    width: 1120px;
+    width: 100%;
     height: 260px;
 
     display: flex;
     justify-content: space-between;
 
     border-radius: 8px;
-    margin: 164px auto;
+    margin: 164px auto 60px auto;
 
     .description{
         display: flex;
@@ -45,6 +47,7 @@ export const Top = styled.div`
 
         position: relative;
         bottom: 152px;
+        right: 55px;
     }
 
     h1{
@@ -56,18 +59,18 @@ export const Top = styled.div`
     }
 `;
 
-export const Section = styled.div`
-    grid-area: content;
-    
-    width: 100%;
-    height: 100vh;
+export const Section = styled.div` 
 
+    margin-bottom: 48px;
     h2 {
         font-weight: 400;
+        margin-bottom: 24px;
     }
 `;
 
 export const Slider = styled.div`
-
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
 `;
 

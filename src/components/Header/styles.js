@@ -52,8 +52,10 @@ export const Logo = styled.div`
             margin-right: 8px;
         }
     }
+
+    /* Parte admin */
     
-/*     span {
+    span {
         display: flex;
         justify-content: flex-end;
         
@@ -65,6 +67,6 @@ export const Logo = styled.div`
 
         margin: -5px 10px 0 0;
     }
- */
+
 
 `;

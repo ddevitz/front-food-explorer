@@ -80,10 +80,12 @@ export const Section = styled.div`
         padding: 0 14px;
     }
 
+    > svg:nth-last-child(2){
+        margin-right: 33px;
+    }
+
     > button {
         width: auto;
-
-        margin-left: 33px;
     }
 
 `;

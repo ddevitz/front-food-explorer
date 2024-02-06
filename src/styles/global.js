@@ -5,11 +5,20 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+
     }
 
     body{
         background-color: ${({ theme }) => theme.COLORS.DARK_400};
         color: ${({ theme }) => theme.COLORS.LIGHT_300};
+
+        overflow: auto;
+
+        /* Estilos da barra de rolagem */
+        &::-webkit-scrollbar {
+            width: 0;
+            background-color: transparent;
+        }
     }
 
     body, input, button, textarea{

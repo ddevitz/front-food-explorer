@@ -35,10 +35,15 @@ export function Details() {
               <Filter title="ingrediente 3"/>
             </Filters>
 
-            <Section>
+{/*             <Section>
               <PiMinus /> <p>01</p> <PiPlus />
 
               <Button title="Incluir" price=" ∙ R$ 25,00"/>
+            </Section> */}
+
+            {/* Parte admin */}
+            <Section>
+              <Button title="Editar prato"/>
             </Section>
           </div>
         </Content>
