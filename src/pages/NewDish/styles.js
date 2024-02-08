@@ -41,5 +41,52 @@ export const Content = styled.div`
 `;
 
 export const Section = styled.div`
+    select {
+        width: 100%;
+        height: 48px;
 
+        padding: 12px 14px;
+
+        border: none;
+        border-radius: 8px;
+
+        background-color: ${({ theme }) => theme.COLORS.DARK_800};
+
+        font-size: 16px;
+        color: ${({ theme }) => theme.COLORS.LIGHT_200};
+
+        /*Estilizando a seta para baixo */
+
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,${encodeURIComponent(`<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.454505 0.829505C0.893845 0.390165 1.60616 0.390165 2.0455 0.829505L8 6.78401L13.9545 0.829505C14.3938 0.390165 15.1062 0.390165 15.5455 0.829505C15.9848 1.26884 15.9848 1.98116 15.5455 2.4205L8.7955 9.1705C8.35616 9.60983 7.64384 9.60983 7.2045 9.1705L0.454505 2.4205C0.015165 1.98116 0.015165 1.26884 0.454505 0.829505Z" fill="#C4C4CC"/></svg>`)}");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+    }
+
+    button{
+        width: 100%;
+        height: 48px;
+
+        border: none;
+        border-radius: 8px;
+
+        background-color: ${({ theme }) => theme.COLORS.DARK_800};
+
+        font-size: 16px;
+        color: ${({ theme }) => theme.COLORS.LIGHT_200};
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .inputAdmin {
+        background-color: ${({ theme }) => theme.COLORS.DARK_800};
+    }
 `;

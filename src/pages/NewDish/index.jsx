@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Container, Content, Section } from "./styles"; 
 
-import { PiCaretLeft } from "react-icons/pi";
+import { PiCaretLeft, PiUploadSimple } from "react-icons/pi";
 
 import { ButtonText } from "../../components/ButtonText";
 import { Header } from "../../components/Header";
@@ -15,6 +15,7 @@ export function NewDish() {
 
   const [category, setCategory ] = useState("");
   const [price, setPrice] = useState("");
+  const fileInput = useRef(null);
 
   const handleCategory = (e) => {
     setCategory(e.target.value);
@@ -25,7 +26,11 @@ export function NewDish() {
     const formattedPrice = `R$ ${inputPrice.slice(0,-2)}, ${inputPrice.slice(-2)}`
 
     setPrice(formattedPrice);
-  }
+  };
+
+  const handleFileButton = () => {
+    fileInput.current.click();
+  };
 
 
   return (
@@ -43,12 +48,19 @@ export function NewDish() {
           <Section>
             <div className="categories">
               <label htmlFor="img">Imagem do prato</label>
-              <Input id="img" type="file"/>
+              <Input 
+                className="inputAdmin" 
+                id="img" 
+                type="file"
+                style={{ display: "none" }}
+                ref={fileInput}
+                />
+                <button onClick={handleFileButton}><PiUploadSimple />Selecione imagem</button>
             </div>
 
             <div className="categories">
               <label htmlFor="title">Nome do prato</label>
-              <Input id="title" type="text" placeholder="Ex: Salada Ceasar"/>
+              <Input className="inputAdmin" id="title" type="text" placeholder="Ex: Salada Ceasar"/>
             </div>
             
             <div className="categories">
@@ -65,12 +77,12 @@ export function NewDish() {
           <Section>
             <div className="categories">
               <label htmlFor="tags">Ingredientes</label>
-              <Input id="tags"/>
+              <Input className="inputAdmin" id="tags"/>
             </div>
 
             <div className="categories">
               <label htmlFor="price">Preço</label>
-              <Input id="price" type="text" value={price} onChange={handlePrice} placeholder="R$ 00,00"/>
+              <Input className="inputAdmin" id="price" type="text" value={price} onChange={handlePrice} placeholder="R$ 00,00"/>
             </div>
           </Section>
 

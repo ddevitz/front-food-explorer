@@ -19,6 +19,8 @@ export const Container = styled.div`
         background: transparent;
         border: 0;
 
+        border-radius: 8px;
+
         &::placeholder {
             color: ${({ theme }) => theme.COLORS.LIGHT_500};
         }   
