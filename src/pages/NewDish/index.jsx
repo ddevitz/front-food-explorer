@@ -8,6 +8,7 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
+import { TextArea } from "../../components/TextArea";
 
 
 export function NewDish() {
@@ -76,7 +77,7 @@ export function NewDish() {
           <Section>
             <div className="categories">
               <label htmlFor="textarea">Descrição</label>
-  {/*             <TextArea id="textarea"/> */}
+              <TextArea id="textarea" placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"/>
             </div>
           </Section>
 
