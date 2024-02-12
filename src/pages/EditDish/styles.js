@@ -25,7 +25,7 @@ export const Container = styled.div`
 
         margin: 24px auto;
         margin-bottom: 100px;
-        
+
         width: 80%;
         height: 100%; 
 
@@ -59,8 +59,12 @@ export const Content = styled.div`
     .content-button {
         display: flex;
         justify-content: flex-end;
+        gap: 8px;
         
         button {
+            &:nth-child(1){
+                background-color: ${({ theme }) => theme.COLORS.DARK_800};
+            }
             max-width: 200px;
         }
     }

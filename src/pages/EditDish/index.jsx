@@ -11,7 +11,7 @@ import { Button } from "../../components/Button";
 import { TextArea } from "../../components/TextArea";
 
 
-export function NewDish() {
+export function EditDish() {
 
   const [category, setCategory ] = useState("");
   const [price, setPrice] = useState("");
@@ -94,6 +94,7 @@ export function NewDish() {
           </Section>
 
           <div className="content-button">
+            <Button title="Excluir prato"/>
             <Button title="Salvar alterações"/>
           </div>
 
