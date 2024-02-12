@@ -9,6 +9,7 @@ import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { TextArea } from "../../components/TextArea";
+import { AddFilter } from "../../components/AddFilter";
 
 
 export function NewDish() {
@@ -77,7 +78,7 @@ export function NewDish() {
           <Section className="section2">
             <div>
               <label htmlFor="tags">Ingredientes</label>
-              <Input className="inputAdmin" id="tags"/>
+              <Input className="inputAdmin" id="tags" teste={true}/>
             </div>
 
             <div>
@@ -93,7 +94,7 @@ export function NewDish() {
             </div>
           </Section>
 
-          <div className="content-button">
+          <div className="button">
             <Button title="Salvar alterações"/>
           </div>
 
@@ -102,7 +103,7 @@ export function NewDish() {
 
       </main>
 
-      <Footer/>
+      <Footer/> 
 
     </Container>
   )
