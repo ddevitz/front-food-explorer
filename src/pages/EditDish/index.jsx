@@ -9,6 +9,7 @@ import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { TextArea } from "../../components/TextArea";
+import { AddFilter } from "../../components/AddFilter";
 
 
 export function EditDish() {
@@ -55,7 +56,7 @@ export function EditDish() {
                 style={{ display: "none" }}
                 ref={fileInput}
                 />
-                <button onClick={handleFileButton}><PiUploadSimple />Selecione imagem</button>
+                <button className="buttonUploadImg" onClick={handleFileButton}><PiUploadSimple />Selecione imagem</button>
             </div>
 
             <div>
@@ -77,7 +78,10 @@ export function EditDish() {
           <Section className="section2">
             <div>
               <label htmlFor="tags">Ingredientes</label>
-              <Input className="inputAdmin" id="tags"/>
+              <div className="inputAdmin" id="tags">
+                <AddFilter value="Pão Naan"/>
+                <AddFilter isNew placeholder="Adicionar"/>
+              </div>
             </div>
 
             <div>
@@ -93,7 +97,7 @@ export function EditDish() {
             </div>
           </Section>
 
-          <div className="content-button">
+          <div className="buttonSalve">
             <Button title="Excluir prato"/>
             <Button title="Salvar alterações"/>
           </div>

@@ -56,7 +56,7 @@ export const Content = styled.div`
         gap: 32px;
     }
 
-    .content-button {
+    .buttonSalve {
         display: flex;
         justify-content: flex-end;
         
@@ -97,7 +97,7 @@ export const Section = styled.div`
         background-position: right 16px center;
     }
 
-    button{
+    .buttonUploadImg {
         width: 100%;
         height: 48px;
 
@@ -121,6 +121,18 @@ export const Section = styled.div`
     }
 
     .inputAdmin {
+        width: 100%;
+        height: 48px;
+        flex-wrap: wrap;
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        padding: 0 16px;
+
+        border-radius: 8px;
         background-color: ${({ theme }) => theme.COLORS.DARK_800};
+
     }
 `;

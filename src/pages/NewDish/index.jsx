@@ -56,7 +56,7 @@ export function NewDish() {
                 style={{ display: "none" }}
                 ref={fileInput}
                 />
-                <button onClick={handleFileButton}><PiUploadSimple />Selecione imagem</button>
+                <button className="buttonUploadImg" onClick={handleFileButton}><PiUploadSimple />Selecione imagem</button>
             </div>
 
             <div>
@@ -78,7 +78,11 @@ export function NewDish() {
           <Section className="section2">
             <div>
               <label htmlFor="tags">Ingredientes</label>
-              <Input className="inputAdmin" id="tags" teste={true}/>
+              <div className="inputAdmin" id="tags">
+                <AddFilter value="Pão Naan"/>
+                <AddFilter isNew placeholder="Adicionar"/>
+              </div>
+
             </div>
 
             <div>
@@ -94,7 +98,7 @@ export function NewDish() {
             </div>
           </Section>
 
-          <div className="button">
+          <div className="buttonSalve">
             <Button title="Salvar alterações"/>
           </div>
 
