@@ -122,14 +122,15 @@ export const Section = styled.div`
 
     .inputAdmin {
         width: 100%;
-        height: 48px;
+        min-height: 40px;
+        max-height: auto;
         flex-wrap: wrap;
 
         display: flex;
         align-items: center;
         gap: 16px;
 
-        padding: 0 16px;
+        padding: 8px 16px;
 
         border-radius: 8px;
         background-color: ${({ theme }) => theme.COLORS.DARK_800};

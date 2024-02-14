@@ -10,7 +10,7 @@ import { Footer } from "../../components/Footer";
 import { Filter } from "../../components/Filter";
 import { Button } from "../../components/Button";
 
-export function Details() {
+export function Details({ isAdmin }) {
   return (
     <Container>
 
@@ -35,16 +35,18 @@ export function Details() {
               <Filter title="ingrediente 3"/>
             </Filters>
 
-{/*             <Section>
+            { isAdmin ? (
+              <Section>
+                <Button title="Editar prato"/>
+              </Section>
+            ) : (
+              <Section>
               <PiMinus /> <p>01</p> <PiPlus />
 
               <Button title="Incluir" price=" ∙ R$ 25,00"/>
-            </Section> */}
-
-            {/* Parte admin */}
-            <Section>
-              <Button title="Editar prato"/>
             </Section>
+            )}
+                      
           </div>
         </Content>
 

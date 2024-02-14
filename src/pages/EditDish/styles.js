@@ -126,7 +126,8 @@ export const Section = styled.div`
 
     .inputAdmin {
         width: 100%;
-        height: 48px;
+        min-height: 40px;
+        max-height: auto;
         flex-wrap: wrap;
 
         display: flex;

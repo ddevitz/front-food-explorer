@@ -5,12 +5,11 @@ import foodImg from '../../assets/Mask-group-3.png';
 import { Container, Description, Section } from "./styles";
 import { Button } from "../Button";
 
-export function FoodCard(){
+export function FoodCard({ isAdmin }){
     return(
         <Container>
-            {/* <PiHeartStraightLight /> */}
-            {/* Parte Admin */}
-            <PiPencilSimple />
+            { isAdmin ? (<PiPencilSimple />) : (<PiHeartStraightLight />)}
+            
             <Description>
                 <img src={foodImg} alt="Foto do prato" />
 
@@ -21,11 +20,9 @@ export function FoodCard(){
                 <span>R$ 0,00</span>
             </Description>
 
-{/*             <Section>
-              <PiMinus /> <p>01</p> <PiPlus />
-
-              <Button title="Incluir" />
-            </Section> */}
+            <Section>
+                { isAdmin ? ("") : ( <><PiMinus /> <p>01</p> <PiPlus /> <Button title="Incluir" /></>)}
+            </Section>
         </Container>
     )
 }
